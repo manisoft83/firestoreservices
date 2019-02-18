@@ -1,0 +1,35 @@
+env_variables:
+  API_KEY:
+manual_scaling:
+  instances: 1
+https://github.com/manisoft83/firestoreservices.git
+
+git init
+git add .
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/manisoft83/firestoreservices.git
+git push -u origin master
+
+git remote add origin https://github.com/manisoft83/dailyexpense.git
+
+https://console.starter-us-east-1.openshift.com/console/project/reposervices/overview
+
+git commit -m "ignore lock"
+
+git commit -am "changes to run in heroku"
+
+ng build --prod
+
+
+ heroku logs --tail --app reposervices
+
+
+bq show rapl-16c79:analytics_152198272.events_20180624 analytics_15219827:datasetId.tableId
+
+gcloud auth list
+gcloud config list project
+gcloud config set project translatefirstpr-1524054686095
+git clone https://github.com/googlecodelabs/cloud-nodejs.git
+cloud-nodejs/start
+gcloud app deploy
