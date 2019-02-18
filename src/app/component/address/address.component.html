@@ -6,6 +6,8 @@
       <th>Name</th>
       <th>Email ID</th>
       <th>Contact Number</th>
+      <th>Address</th>
+      <th>Category</th>
       <th>Action</th>
     </tr>
     <tr>
@@ -19,6 +21,12 @@
         <input type="text" class="form-control" [(ngModel)]="addUser.contact_number" placeholder="Contact Number">
       </td>
       <td>
+        <input type="text" class="form-control" [(ngModel)]="addUser.address" placeholder="Address">
+      </td>
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="addUser.category" placeholder="Category">
+      </td>
+      <td>
         <button class="btn btn-success" (click)="insert()">
           <span class="glyphicon  glyphicon-user"> Insert</span>
         </button>
@@ -28,13 +36,19 @@
   <tbody *ngFor="let item of user | async">
     <tr>
       <td>
-        {{item.name}}123
+        {{item.name}}
       </td>
       <td>
         {{item.email_id}}
       </td>
       <td>
         {{item.contact_number}}{{item.roles}}
+      </td>
+      <td>
+        {{item.address}}
+      </td>
+      <td>
+        {{item.category}}
       </td>
       <td>
         <button class="btn btn-danger" (click)="delete(item)">
@@ -60,6 +74,12 @@
             </div>
             <div class="col-md-3">
               <input type="text" class="form-control" [(ngModel)]="itemToUpdate.contact_number" placeholder="Contact">
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" [(ngModel)]="itemToUpdate.address" placeholder="Address">
+            </div>
+            <div class="col-md-3">
+              <input type="text" class="form-control" [(ngModel)]="itemToUpdate.category" placeholder="Category">
             </div>
           </div>
           <p></p>

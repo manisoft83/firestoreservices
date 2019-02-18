@@ -52,7 +52,7 @@ export class LoginComponent {
   tryLogin(value){
     this.authService.doLogin(value)
     .then(res => {
-      this.router.navigate(['/user']);
+      this.router.navigate(['/address']);
     }, err => {
       console.log(err);
       this.errorMessage = err.message;

@@ -1,35 +1,10 @@
 runtime: python27
 api_version: 1
-threadsafe: yes
-
+threadsafe: true
+ 
 handlers:
-- url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
-
 - url: /
-  static_files: index.html
-  upload: index.html
-
-- url: /projects
-  static_dir: projects
-
-- url: /css
-  static_dir: css
-
-- url: /font
-  static_dir: font
-
-- url: /img
-  static_dir: img
-
-- url: /js
-  static_dir: js
-
-- url: /.*
-  static_files: index.html
-  upload: index.html
-
-libraries:
-- name: webapp2
-  version: "2.5.1"
+  static_files: reposervices/index.html
+  upload: reposervices/index.html
+- url: /
+  static_dir: reposervices

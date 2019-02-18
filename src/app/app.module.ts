@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { FirestoreuserComponent } from './component/firestoreuser/firestoreuser.component';
+import { AddressComponent } from './component/address/address.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { environment } from '../environments/environment';
@@ -21,7 +22,8 @@ import { UserResolver } from './services/user.resolver';
   declarations: [
     AppComponent,
     LoginComponent,
-    FirestoreuserComponent
+    FirestoreuserComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
